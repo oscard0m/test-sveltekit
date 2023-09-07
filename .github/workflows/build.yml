@@ -23,6 +23,6 @@ jobs:
       - name: Gravity
         run: npx gravityci '.svelte-kit/output/**/*'
         env:
-            GRAVITY_TOKEN: ${{ env.GRAVITY_TOKEN }}
+            GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
             GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
           

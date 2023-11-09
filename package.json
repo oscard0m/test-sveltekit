@@ -21,7 +21,7 @@
 		"@gravityci/cli": "^0.0.2-alpha.14"
 	},
 	"dependencies": {
-		"@melt-ui/svelte": "^0.55.0"
+		"@melt-ui/svelte": "^0.61.0"
 	},
 	"type": "module"
 }

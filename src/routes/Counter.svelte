@@ -15,7 +15,6 @@
 		// handle negative numbers
 		return ((n % m) + m) % m;
 	}
-
 </script>
 
 <div class="counter">

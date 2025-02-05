@@ -10,6 +10,7 @@
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
+		"@gravityci/cli": "^0.0.8",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
@@ -17,8 +18,7 @@
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"typescript": "^5.0.0",
-		"vite": "^4.5.1",
-		"@gravityci/cli": "^0.0.2-alpha.14"
+		"vite": "^4.5.1"
 	},
 	"dependencies": {
 		"@melt-ui/svelte": "^0.55.0"

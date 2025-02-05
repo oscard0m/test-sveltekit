@@ -1,5 +1,5 @@
 <script>
-  const text = "Welcome to SvelteKit!";
+  const text = "Welcome to SvelteKit!!";
 </script>
 
 <h1>{text}</h1>

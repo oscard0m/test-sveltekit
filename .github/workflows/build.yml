@@ -1,11 +1,10 @@
 name: Build
-        
+
 on:
   push:
     branches:
       - main
   pull_request: {}
-
 
 jobs:
   build:
@@ -14,15 +13,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Node.js
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Install Node.js
         uses: actions/setup-node@v4
-      - name: install dependencies
-        run: npm ci
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Build project
         run: npm run build
+
       - name: Gravity
-        run: npx gravityci '.svelte-kit/output/**/*' --fingerprint ".+(-[0-9A-Z]{8})\\..+"
+        run: pnpx gravityci '.svelte-kit/output/**/*' --fingerprint ".+(-[0-9A-Z]{8})\\..+"
         env:
-            GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
-            GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
-          
+          GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
+          GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}

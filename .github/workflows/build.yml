@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Gravity
-        run: pnpx gravityci '.svelte-kit/output/**/*' --fingerprint ".+(-[0-9A-Z]{8})\\..+"
+        run: pnpm dlx @gravityci/cli '.svelte-kit/output/**/*' --fingerprint ".+(-[0-9A-Z]{8})\\..+"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
           GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}

@@ -1,5 +1,6 @@
 <script>
   const text = "Welcome to SvelteKit!!!!!!";
+// test probot
 </script>
 
 <h1>{text}</h1>

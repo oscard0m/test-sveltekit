@@ -33,7 +33,7 @@ jobs:
         run: npm run build
 
       - name: Gravity
-        run: pnpm dlx @gravityci/cli '.svelte-kit/output/**/*' --fingerprint "^(?!.*chunk).+(\.[0-9A-Za-z_\-]{8})\..+"
+        run: pnpm dlx @gravityci/cli '.svelte-kit/output/**/*' --fingerprint "^(?!.*chunk).+(\.[0-9A-Za-z_\-]{8})\..+ --js-chunks client/_app/immutable/(chunks|entry)/.+\.js"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
           GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
